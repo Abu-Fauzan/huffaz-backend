@@ -6,11 +6,6 @@ const admin = require("firebase-admin");
 // 🔥 LOAD SERVICE ACCOUNT
 const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_KEY.replace(/\\n/g, '\n'));
 
-admin.initializeApp({
-  credential:
-  admin.credential.cert(serviceAccount)
-});
-
 // 🔥 INIT FIREBASE ADMIN
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
